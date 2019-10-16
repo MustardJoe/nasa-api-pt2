@@ -3,3 +3,6 @@ I am making a second atempt at a project I have wanted to do for a while: a user
 will have user supply their own key, and then they will be able to navigate through the api in a more "useable" format than just making a series of long querry strings in the browser url bar.
 
 also want this version to be react-based.
+
+10/15/2019
+things are shaping up but... I need something like the 'withFetch.js' file in the rick & morty thing.  My nasa-api is like the rickandmortyapi.js.  need the withFetch equivalent.
