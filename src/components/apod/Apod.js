@@ -9,7 +9,7 @@ function ApodComp({ astroPhoto }) {
   return (
     <section>
       <h3>{title}</h3>
-      <img src="https://apod.nasa.gov/apod/image/1704/EnceladusShadow_Cassini_960.jpg" />
+      <img src={url} />
       <p>{explanation}</p>
       <p>{date}</p>
       <p>{url}</p>
