@@ -7,14 +7,14 @@ function ApodComp({ astroPhoto }) {
   } = astroPhoto;
 
   return (
-    <section>
+    <div>
       <h3>{title}</h3>
       <img src={url} />
       <p>{explanation}</p>
       <p>{date}</p>
       <p>{url}</p>
       <p>{hdurl}</p>
-    </section>
+    </div>
   );
 }
 
