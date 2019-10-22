@@ -6,3 +6,7 @@ also want this version to be react-based.
 
 10/15/2019
 things are shaping up but... I need something like the 'withFetch.js' file in the rick & morty thing.  My nasa-api is like the rickandmortyapi.js.  need the withFetch equivalent.
+
+10/21/2019
+haven't worked on this for a while (job applications and PRGE). Got ApodComp to render on page with static data.
+Deciding not to use withFetch format.  Will need to work on loading part later.  working on getting ApodComp to render with dynamic default (ie, load with 'today's' data, not dummy data)
