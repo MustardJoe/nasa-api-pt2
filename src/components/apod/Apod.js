@@ -3,17 +3,21 @@ import PropTypes from 'prop-types';
 
 function ApodComp({ astroPhoto }) {
   const {
-    date = '1995', explanation, hdurl, title, url,
+    date = '1995 - dummy data',
+    explanation,
+    hdurl,
+    title,
+    url,
   } = astroPhoto;
 
   return (
-    <div>
-      <h3>{title}</h3>
+    <div className="apodItem">
+      <h2>{title}</h2>
       <img src={url} />
-      <p>{explanation}</p>
-      <p>{date}</p>
-      <p>{url}</p>
-      <p>{hdurl}</p>
+      <p>Desciption: {explanation}</p>
+      <p>Astronomy Photo of the Day from: {date}</p>
+      <p>SD image: <a href={url}>{url}</a></p>
+      <p>HD Image: <a href={hdurl}>{hdurl}</a></p>
     </div>
   );
 }
