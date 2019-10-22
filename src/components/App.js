@@ -1,6 +1,7 @@
 import React from 'react';
 // import GetApod from '../containers/apod/GetApod';
 import ApodComp from '../components/apod/Apod';
+import GetApod from '../containers/apod/GetApod';
 
 const astroPhoto = {
   date: '2017-04-16',
@@ -14,7 +15,7 @@ export default function App() {
   return (
     <div>
       <h1>Hello World</h1>
-      <ApodComp astroPhoto={astroPhoto} />
+      <GetApod />
     </div>
   );
 }
