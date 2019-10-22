@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div>
       <h1>Hello World</h1>
-      <GetApod />
+      <ApodComp astroPhoto={astroPhoto} />
     </div>
   );
 }
