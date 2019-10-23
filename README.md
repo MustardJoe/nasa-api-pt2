@@ -10,3 +10,6 @@ things are shaping up but... I need something like the 'withFetch.js' file in th
 10/21/2019
 haven't worked on this for a while (job applications and PRGE). Got ApodComp to render on page with static data.
 Deciding not to use withFetch format.  Will need to work on loading part later.  working on getting ApodComp to render with dynamic default (ie, load with 'today's' data, not dummy data)
+
+10/22/2019
+Got url + key working.  Think I need the loading logic becayse my promise says it's still pending in console log.

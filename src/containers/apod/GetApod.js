@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import ApodComp from '../../components/apod/Apod';
 import { getImage } from '../../services/nasaApi';
+import default_key from '../../../key';
 
+let ourKey = default_key;
+let ourDate = '';
 // const astroPhoto = {
 //   date: '2017-04-16',
 //   explanation: 'Does Enceladus have underground oceans that could support life?',
@@ -13,20 +16,20 @@ import { getImage } from '../../services/nasaApi';
 
 class GetApod extends Component {
   state = {
-    astroPhoto: {}
+    astroPhoto: {},
   }
 
-  fetchAstroData = () => {
-    getImage()
+  fetchAstroData = (nasaKey, fetchDate) => {
+    getImage(nasaKey, fetchDate)
       .then(({ astroPhoto }) => this.setState({ astroPhoto }));
   }
   
   componentDidMount() {
-    this.fetchAstroData();
+    this.fetchAstroData(ourKey, ourDate);
   }
 
   render() {
-    const { astroPhoto } = this.state;
+    const { astroPhoto, } = this.state;
 
     return <ApodComp astroPhoto={astroPhoto} />;
   }
