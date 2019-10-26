@@ -17,12 +17,16 @@ let ourDate = '';
 class GetApod extends Component {
   state = {
     astroPhoto: {},
+    loading: true,
   }
 
   fetchAstroData = (nasaKey, fetchDate) => {
+    this.setState({ loading: true });
     let astroPhoto = getImage(nasaKey, fetchDate);
     console.log('in GetApod', astroPhoto);
-    return astroPhoto;
+    return this.setState({ astroPhoto: astroPhoto, loading: false },
+      console.log(this.state));
+    // return astroPhoto;
     // getImage(nasaKey, fetchDate)
     //   .then(({ astroPhoto }) => this.setState({ astroPhoto }));
   }
@@ -33,10 +37,10 @@ class GetApod extends Component {
 
   render() {
     const { astroPhoto, } = this.state;
+    console.log('GetApod in render line 40', astroPhoto);
 
     return <ApodComp astroPhoto={astroPhoto} />;
   }
 }
 
-// export default ApodComp({ astroPhoto });
 export default GetApod;
