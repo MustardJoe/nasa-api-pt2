@@ -20,8 +20,11 @@ class GetApod extends Component {
   }
 
   fetchAstroData = (nasaKey, fetchDate) => {
-    getImage(nasaKey, fetchDate)
-      .then(({ astroPhoto }) => this.setState({ astroPhoto }));
+    let astroPhoto = getImage(nasaKey, fetchDate);
+    console.log('in GetApod', astroPhoto);
+    return astroPhoto;
+    // getImage(nasaKey, fetchDate)
+    //   .then(({ astroPhoto }) => this.setState({ astroPhoto }));
   }
   
   componentDidMount() {
