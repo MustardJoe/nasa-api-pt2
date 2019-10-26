@@ -1,16 +1,11 @@
 //Our NASA API calls are here - basic structure take from my Rick And Morty thing
-// import default_key from '../../key';
 
 const url = 'https://api.nasa.gov/planetary/apod';
-// const key = default_key;
-// /* eslint-disable-next-line no-console */
-// console.log(key);
 
 export const getImage = async(key, date) => {
   const res = await fetch(`${url}?api_key=${key}${date}`);
   const ok = res.ok;
   if(!ok) {
-    console.log('res', res);
     throw new Error('Unable to fetch Astronomy Photo');
   }
   const astroPhoto = await res.json();
