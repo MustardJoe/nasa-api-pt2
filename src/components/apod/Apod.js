@@ -9,7 +9,6 @@ function ApodComp({ astroPhoto }) {
     title,
     url,
   } = astroPhoto;
-  console.log('apod comp', astroPhoto);
 
   return (
     <div className="apodItem">

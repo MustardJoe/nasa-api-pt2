@@ -9,23 +9,6 @@ export const getImage = async(key, date) => {
     throw new Error('Unable to fetch Astronomy Photo');
   }
   const astroPhoto = await res.json();
-  console.log('in api', astroPhoto);
   return astroPhoto;
-
-  // return fetch(`${url}?api_key=${key}${date}`)
-  //   .then(res => ([res.ok, res.json()]))
-  //   .then(([ok, json]) => {
-  //     if(!ok) throw 'Unable to fetch Astronomy Photo';
-
-  //     return json;
-  //   })
-  //   .then(({ res }) => res.map(astroPhoto => ({
-  //     date: astroPhoto.date,
-  //     explanation: astroPhoto.explanation,
-  //     hdurl: astroPhoto.hdurl,
-  //     title: astroPhoto.title,
-  //     url: astroPhoto.url,
-  //   })));
 };
-
 
