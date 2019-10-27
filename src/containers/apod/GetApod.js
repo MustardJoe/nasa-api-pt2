@@ -20,9 +20,9 @@ class GetApod extends Component {
     loading: true,
   }
 
-  fetchAstroData = (nasaKey, fetchDate) => {
+  fetchAstroData = async(nasaKey, fetchDate) => {
     this.setState({ loading: true });
-    let astroPhoto = getImage(nasaKey, fetchDate);
+    let astroPhoto = await getImage(nasaKey, fetchDate);
     console.log('in GetApod', astroPhoto);
     return this.setState({ astroPhoto: astroPhoto, loading: false },
       console.log(this.state));
