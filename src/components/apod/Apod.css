@@ -1,4 +1,12 @@
 .apodItem {
   background-color: aqua;
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 12px;
+  max-width: 70vw;
   
+  img {
+    border-radius: 12px;
+    width: 48vw;
+  }
 } 
