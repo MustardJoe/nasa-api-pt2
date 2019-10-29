@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Apod.css';
 
 function ApodComp({ astroPhoto }) {
   const {
@@ -11,7 +12,7 @@ function ApodComp({ astroPhoto }) {
   } = astroPhoto;
 
   return (
-    <div className="apodItem">
+    <div className={styles.apodItem}>
       <h2>{title}</h2>
       <img src={url} />
       <p>Desciption: {explanation}</p>
