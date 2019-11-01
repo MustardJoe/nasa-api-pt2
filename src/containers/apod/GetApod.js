@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import ApodComp from '../../components/apod/Apod';
 import { getImage } from '../../services/nasaApi';
+import { todayDateSplit } from '../../services/todayDateSplit';
 import default_key from '../../../key';
 
 let ourKey = default_key;
 let ourDate = '';
 
-function todayDateSplit() {
-  var today = new Date();
-  let year = today.getFullYear();
-  let month = today.getMonth() + 1;
-  let day = today.getDate();
-  return `${year}-${month}-${day}`;
-}
+// function todayDateSplit() {
+//   var today = new Date();
+//   let year = today.getFullYear();
+//   let month = today.getMonth() + 1;
+//   let day = today.getDate();
+//   return `${year}-${month}-${day}`;
+// }
 
 let today = todayDateSplit;
 
