@@ -5,18 +5,21 @@ import default_key from '../../../key';
 
 let ourKey = default_key;
 let ourDate = '';
-// const astroPhoto = {
-//   date: '2017-04-16',
-//   explanation: 'Does Enceladus have underground oceans that could support life?',
-//   hdurl: 'https://apod.nasa.gov/apod/image/1704/EnceladusShadow_Cassini_960.jpg',
-//   title: 'Life-Enabling Plumes above Enceladus',
-//   url: 'https://apod.nasa.gov/apod/image/1704/EnceladusShadow_Cassini_960.jpg',
-// };
 
+function todayDateSplit() {
+  var today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth() + 1;
+  let day = today.getDate();
+  return `${year}-${month}-${day}`;
+}
+
+let today = todayDateSplit;
 
 class GetApod extends Component {
   state = {
     astroPhoto: {},
+    //add date stuff here
     loading: true,
   }
 
