@@ -3,18 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Datecomp.css';
 
 function DateComp({ date }) {
-  //moved this date split func to GetApod where it belongs
-  //leaving old code here for now incase needed for testing
-  //
-  // function todayDateSplit() {
-  //   var today = new Date();
-  //   let year = today.getFullYear();
-  //   let month = today.getMonth() + 1;
-  //   let day = today.getDate();
-  //   return `${year}-${month}-${day}`;
-  // }
-
-  // let today = todayDateSplit;
+  //maybe make this class container - look into it
 
   return (
     <div className={styles.datecompdiv}>
