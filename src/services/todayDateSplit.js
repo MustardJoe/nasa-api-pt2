@@ -6,4 +6,4 @@ function todayDateSplit() {
   return `${year}-${month}-${day}`;
 }
 
-export default todayDateSplit;
+export { todayDateSplit };
