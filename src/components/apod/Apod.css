@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+
 .apodItem {
-  background-color: aqua;
+  font-family: 'Dosis', sans-serif;
+  background-color: rgba(0, 0, 0, 0.664);
   margin: 1em;
   padding: 0.5em;
   border-radius: 12px;

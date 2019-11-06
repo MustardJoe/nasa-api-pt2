@@ -33,9 +33,9 @@ class GetApod extends Component {
     this.fetchAstroData(ourKey, this.state.ourDate);
   }
 
-  componentDidUpdate() {
-    this.fetchAstroData(ourKey, this.state.ourDate);
-  }
+  // componentDidUpdate() {
+  //   this.fetchAstroData(ourKey, this.state.ourDate);
+  // }
 
   render() {
     const { astroPhoto, ourDate } = this.state;

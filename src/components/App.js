@@ -5,7 +5,8 @@ import DateComp from '../components/date/DateComp';
 export default function App() {
   return (
     <div>
-      <h1>Jon's Nasa Astronomy Photo Of the Day Experience</h1>
+      <h1>AstroView</h1>
+      <h2>Helping You Experience the NASA Astronomy Photo Of the Day</h2>
       <GetApod />
     </div>
   );
