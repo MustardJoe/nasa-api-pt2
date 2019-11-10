@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class UserKey extends Component {
   static propTypes = {
-    updateKey: PropTypes.func
+    updateKey: PropTypes.func.isRequired
   };
 
   state = {
