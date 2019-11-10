@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ApodComp from '../../components/apod/Apod';
+import UserKey from '../../components/userkey/UserKey';
 import DateComp from '../../components/date/DateComp';
 import { getImage } from '../../services/nasaApi';
 import { todayDateSplit } from '../../services/todayDateSplit';
@@ -43,7 +44,8 @@ class GetApod extends Component {
 
     return (
       <section>
-          Enter Date: <input type="text" value={ourDate} 
+        <UserKey />
+        Enter Date: <input type="text" value={ourDate} 
           onChange={this.handleTextBox}></input>
         <ApodComp astroPhoto={astroPhoto} />
       </section>
