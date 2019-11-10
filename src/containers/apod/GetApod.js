@@ -7,22 +7,30 @@ import { todayDateSplit } from '../../services/todayDateSplit';
 import default_key from '../../../key';
 
 let ourKey = default_key;
-
 let today = todayDateSplit();
-console.log(today);
 
 class GetApod extends Component {
   state = {
     astroPhoto: {},
     ourDate: today,
     loading: true,
+    key: '',
+  }
+
+  updateKey = key => {
+    this.setState(() => {
+      console.log(this.state, 'line 24 in GetApod');
+      return {
+        key: key
+      };
+    });
   }
 
   fetchAstroData = async(nasaKey, fetchDate) => {
     this.setState({ loading: true });
     let astroPhoto = await getImage(nasaKey, fetchDate);
     return this.setState({ astroPhoto: astroPhoto, loading: false },
-      console.log('in fetchAstroData, logging state', this.state));
+    );
   }
 
   handleTextBox = event => {
@@ -44,7 +52,7 @@ class GetApod extends Component {
 
     return (
       <section>
-        <UserKey />
+        <UserKey updateKey={this.updateKey} />
         Enter Date: <input type="text" value={ourDate} 
           onChange={this.handleTextBox}></input>
         <ApodComp astroPhoto={astroPhoto} />
