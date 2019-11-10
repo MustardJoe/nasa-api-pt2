@@ -8,9 +8,12 @@ body {
   background: url(./assets/LeonardoJulio4-6-2017.jpg);
 }
 
+.topHead {
+  background-color: rgba(0, 0, 0, 0.664);
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 12px;
+  max-width: 70vw;
+}
 
-.apodItem {
-  background-color: aqua;
-  
-} 
   
