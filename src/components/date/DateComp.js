@@ -1,26 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Datecomp.css';
+import { todayDateSplit } from '../../services/todayDateSplit';
 
-function DateComp({ date }) {
-  //maybe make this class container - look into it
+let today = todayDateSplit();
 
-  const handleTextBox = event => {
-    this.setState({ ourDate: event.target.value });
+class DateComp extends Component {
+  static propTypes = {
+    updateDate: PropTypes.func.isRequired
   };
 
-  return (
-    <div className={styles.datecompdiv}>
-      <form>
-        Enter Date: <input type="text" value={date} 
-          onChange={handleTextBox}></input>
-      </form>
-    </div>
-  );
-}
+  state = {
+    date: today
+  }
 
-DateComp.propTypes = {
-  date: PropTypes.string.isRequired,
-};
+  // handleTextBox = event => {
+  //   this.setState({ ourDate: event.target.value });
+  // };
+
+  handleChange = ({ target }) => {
+    this.setState({ [target.name]: target.value });
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    const { date } = this.state;
+    /* eslint-disable-next-line no-console */
+    console.log(date, 'date cLog DateComp');
+    this.props.updateDate({ date: date });
+  }
+
+  // name="key" value={this.state.key} onChange={this.handleChange}
+  render() {
+    return (
+      <div className={styles.datecompdiv}>
+        <form onSubmit={this.handleSubmit}>
+          Enter Date: <input type="text" name="date" value={this.state.date} 
+            onChange={this.handleChange}></input>
+          <button>Load APOD for this date</button>
+        </form>
+      </div>
+    );
+  }
+}
 
 export default DateComp;
