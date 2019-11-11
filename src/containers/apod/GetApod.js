@@ -12,7 +12,7 @@ let today = todayDateSplit();
 class GetApod extends Component {
   state = {
     astroPhoto: {},
-    ourDate: today,
+    ourDate: { date: today },
     loading: true,
     key: '',
   }
@@ -26,6 +26,13 @@ class GetApod extends Component {
     });
   }
 
+  updateDate = date => {
+    this.setState(() => {
+      console.log('updateDate function firing in GetApod container', date);
+      return this.setState({ ourDate: date });
+    });
+  }
+
   fetchAstroData = async(nasaKey, fetchDate) => {
     this.setState({ loading: true });
     let astroPhoto = await getImage(nasaKey, fetchDate);
@@ -33,28 +40,27 @@ class GetApod extends Component {
     );
   }
 
-  handleTextBox = event => {
-    event.preventDefault;
-    this.setState({ ourDate: event.target.value });
-  };
+  // handleTextBox = event => {
+  //   event.preventDefault;
+  //   this.setState({ ourDate: event.target.value });
+  // };      //  <-- remove this code when certain i don't need to refrence it anymore
   
   componentDidMount() {
-    this.fetchAstroData(ourKey, this.state.ourDate);
+    this.fetchAstroData(ourKey, this.state.ourDate.date);
   }
 
   // componentDidUpdate() {
-  //   this.fetchAstroData(ourKey, this.state.ourDate);
+  //   this.fetchAstroData(ourKey, this.state.ourDate.date);
   // }
 
   render() {
-    const { astroPhoto, ourDate } = this.state;
+    const { astroPhoto } = this.state;
     console.log('GetApod in render line 40, logging state', this.state);
 
     return (
       <section>
         <UserKey updateKey={this.updateKey} />
-        Enter Date: <input type="text" value={ourDate} 
-          onChange={this.handleTextBox}></input>
+        <DateComp updateDate={this.updateDate} />
         <ApodComp astroPhoto={astroPhoto} />
       </section>
     );
