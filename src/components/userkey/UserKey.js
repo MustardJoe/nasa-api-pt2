@@ -15,7 +15,6 @@ class UserKey extends Component {
     const { key } = this.state;
     /* eslint-disable-next-line no-console */
     console.log(key, 'in the jam');
-
     this.props.updateKey({ key: key });
   }
 
@@ -24,7 +23,6 @@ class UserKey extends Component {
   }
 
   render() {
-
     return (
       <form onSubmit={this.handleSubmit}>
         <input type="text" name="key" value={this.state.key} onChange={this.handleChange}
