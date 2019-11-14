@@ -6,7 +6,6 @@ import { getImage } from '../../services/nasaApi';
 import { todayDateSplit } from '../../services/todayDateSplit';
 import default_key from '../../../key';
 
-let ourKey = default_key;
 let today = todayDateSplit();
 
 class GetApod extends Component {
@@ -31,6 +30,10 @@ class GetApod extends Component {
     return this.setState({ astroPhoto: astroPhoto, loading: false },
     );
   }
+
+  componentDidMount() {
+    this.fetchAstroData(this.state.key, this.state.date);
+  }
   
 
 
@@ -38,11 +41,11 @@ class GetApod extends Component {
     const { astroPhoto } = this.state;
 
     return (
-      <section>
+      <div>
         <UserKey updateKey={this.updateKey} />
-        <DateComp updateDate={this.updateDate} fetchAstroData={this.fetchAstroData} date={this.date} />
+        <DateComp updateDate={this.updateDate} fetchAstroData={this.fetchAstroData} date={this.state.date} />
         <ApodComp astroPhoto={astroPhoto} />
-      </section>
+      </div>
     );
   }
 }
