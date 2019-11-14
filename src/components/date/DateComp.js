@@ -3,41 +3,35 @@ import PropTypes from 'prop-types';
 import styles from './Datecomp.css';
 import { todayDateSplit } from '../../services/todayDateSplit';
 
-let today = todayDateSplit();
+// let today = todayDateSplit();
 
 class DateComp extends Component {
   static propTypes = {
-    updateDate: PropTypes.func.isRequired
+    updateDate: PropTypes.func.isRequired,
+    fetchAstroData: PropTypes.func.isRequired,
+    date: PropTypes.string.isRequired,
   };
 
-  state = {
-    date: today
-  }
-
-  // handleTextBox = event => {
-  //   this.setState({ ourDate: event.target.value });
-  // };
+  // state = {
+  //   date: today
+  // }
 
   handleChange = ({ target }) => {
-    this.setState({ [target.name]: target.value });
+    this.props.updateDate(target.value);
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    const { date } = this.state;
-    /* eslint-disable-next-line no-console */
-    console.log(date, 'date cLog DateComp');
-    this.props.updateDate({ date: date });
+    this.props.fetchAstroData();
   }
 
-  // name="key" value={this.state.key} onChange={this.handleChange}
   render() {
     return (
       <div className={styles.datecompdiv}>
         <form onSubmit={this.handleSubmit}>
-          Enter Date: <input type="text" name="date" value={this.state.date} 
+          Enter Date: <input type="text" name="date" value={this.props.date} 
             onChange={this.handleChange}></input>
-          <button>Load APOD for this date</button>
+          <button type="submit">Load APOD for this date</button>
         </form>
       </div>
     );

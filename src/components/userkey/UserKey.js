@@ -13,13 +13,11 @@ class UserKey extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const { key } = this.state;
-    /* eslint-disable-next-line no-console */
-    console.log(key, 'in the jam');
-    this.props.updateKey({ key: key });
+    this.props.updateKey(key);
   }
 
   handleChange = ({ target }) => {
-    this.setState({ [target.name]: target.value });
+    this.setState({ key: target.value });
   }
 
   render() {

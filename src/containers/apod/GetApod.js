@@ -12,55 +12,35 @@ let today = todayDateSplit();
 class GetApod extends Component {
   state = {
     astroPhoto: {},
-    ourDate: { date: today },
+    date: today,
     loading: true,
-    key: '',
+    key: default_key,
   }
 
-  updateKey = key => {
-    this.setState(() => {
-      console.log(this.state, 'line 24 in GetApod');
-      return {
-        key: key
-      };
-    });
+  updateKey = newKey => {
+    this.setState({ key: newKey });
   }
 
-  updateDate = date => {
-    this.setState(() => {
-      console.log('updateDate function firing in GetApod container', date);
-      return this.setState({ ourDate: date });
-    });
+  updateDate = newDate => {
+    this.setState({ date: newDate });
   }
 
-  fetchAstroData = async(nasaKey, fetchDate) => {
+  fetchAstroData = async() => {
     this.setState({ loading: true });
-    let astroPhoto = await getImage(nasaKey, fetchDate);
+    let astroPhoto = await getImage(this.state.key, this.state.date);
     return this.setState({ astroPhoto: astroPhoto, loading: false },
     );
   }
-
-  // handleTextBox = event => {
-  //   event.preventDefault;
-  //   this.setState({ ourDate: event.target.value });
-  // };      //  <-- remove this code when certain i don't need to refrence it anymore
   
-  componentDidMount() {
-    this.fetchAstroData(ourKey, this.state.ourDate.date);
-  }
 
-  // componentDidUpdate() {
-  //   this.fetchAstroData(ourKey, this.state.ourDate.date);
-  // }
 
   render() {
     const { astroPhoto } = this.state;
-    console.log('GetApod in render line 40, logging state', this.state);
 
     return (
       <section>
         <UserKey updateKey={this.updateKey} />
-        <DateComp updateDate={this.updateDate} />
+        <DateComp updateDate={this.updateDate} fetchAstroData={this.fetchAstroData} date={this.date} />
         <ApodComp astroPhoto={astroPhoto} />
       </section>
     );
