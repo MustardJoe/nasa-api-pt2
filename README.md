@@ -6,7 +6,9 @@ will have user supply their own key, and then they will be able to navigate thro
 
 also want this version to be react-based.
 
-
+11/14/2019
+have a goodish version of my MVP.  needs polishing, hosting, brainstorming on further ideas (LL says user login would be nice) - but not too shabby
+also, (No data before 1995-6-20)
 
 10/28/2019
 figured out/remembered how to do styling in react(sorta) so put some styling on apod comp.  working on date comp, got basic function to create today date string.
