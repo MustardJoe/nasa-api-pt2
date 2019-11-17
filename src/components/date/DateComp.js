@@ -3,18 +3,12 @@ import PropTypes from 'prop-types';
 import styles from './Datecomp.css';
 import { todayDateSplit } from '../../services/todayDateSplit';
 
-// let today = todayDateSplit();
-
 class DateComp extends Component {
   static propTypes = {
     updateDate: PropTypes.func.isRequired,
     fetchAstroData: PropTypes.func.isRequired,
     date: PropTypes.string.isRequired,
   };
-
-  // state = {
-  //   date: today
-  // }
 
   handleChange = ({ target }) => {
     this.props.updateDate(target.value);
