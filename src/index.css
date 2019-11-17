@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 
 body {
   font-family: 'Dosis', sans-serif;
@@ -6,12 +7,23 @@ body {
   justify-content: center;
   margin: 1em;
   color: mediumpurple;
+  color: LemonChiffon;
   text-align: center;
   background: url(./assets/LeonardoJulio4-6-2017.jpg);
 }
 .app {
   margin: auto;
   align-self: center;
+
+  h1 {
+    font-family: 'Lobster', cursive;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
 }
 
 .topHead {
