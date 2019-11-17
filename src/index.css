@@ -16,9 +16,10 @@ body {
   align-self: center;
 
   h1 {
+    font-size: 3em;
     font-family: 'Lobster', cursive;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    padding: 0;
+    margin: 0;
   }
 
   h2 {
