@@ -26,7 +26,6 @@ class DateComp extends Component {
           Enter Date: <input type="text" name="date" value={this.props.date} 
             onChange={this.handleChange}></input>
           <button type="submit">Load APOD for this date</button>
-            (No data before 1995-6-20)
         </form>
       </div>
     );
