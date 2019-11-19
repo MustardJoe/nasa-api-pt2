@@ -10,6 +10,8 @@ body {
   color: LemonChiffon;
   text-align: center;
   background: url(./assets/LeonardoJulio4-6-2017.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .app {
   margin: auto;
