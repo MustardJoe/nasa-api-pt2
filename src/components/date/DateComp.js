@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styles from './Datecomp.css';
-import { todayDateSplit } from '../../services/todayDateSplit';
+// import styles from './Datecomp.css';
+// import { todayDateSplit } from '../../services/todayDateSplit';
 
 class DateComp extends Component {
   static propTypes = {
@@ -21,7 +21,7 @@ class DateComp extends Component {
 
   render() {
     return (
-      <div className={styles.datecompdiv}>
+      <div>
         <form onSubmit={this.handleSubmit}>
           Enter Date: <input type="text" name="date" value={this.props.date} 
             onChange={this.handleChange}></input>

@@ -4,7 +4,7 @@ import UserKey from '../../components/userkey/UserKey';
 import DateComp from '../../components/date/DateComp';
 import { getImage } from '../../services/nasaApi';
 import { todayDateSplit } from '../../services/todayDateSplit';
-import default_key from '../../../key';
+// import default_key from '../../../key';
 
 let today = todayDateSplit();
 
