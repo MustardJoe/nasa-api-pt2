@@ -13,7 +13,7 @@ class GetApod extends Component {
     astroPhoto: {},
     date: today,
     loading: true,
-    key: default_key,
+    key: 'DEMO_KEY',
   }
 
   updateKey = newKey => {
