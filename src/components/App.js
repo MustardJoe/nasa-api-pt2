@@ -8,7 +8,7 @@ export default function App() {
     <div className={styles.app}>
       <div className={styles.topHead}>
         <h1>AstroView</h1>
-        <h2>Helping You Experience the NASA Astronomy Photo Of the Day</h2>
+        <h2>Helping You Experience the NASA Astronomy Picture Of the Day</h2>
         <IntroText />
       </div>
       <GetApod />

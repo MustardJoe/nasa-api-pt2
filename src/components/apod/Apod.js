@@ -16,7 +16,7 @@ function ApodComp({ astroPhoto }) {
       <h2>{title}</h2>
       <img src={url} />
       <p>Desciption: {explanation}</p>
-      <p>Astronomy Photo of the Day from: {date}</p>
+      <p>Astronomy Picture of the Day from: {date}</p>
       <p>SD image: <a href={url}>{url}</a></p>
       <p>HD Image: <a href={hdurl}>{hdurl}</a></p>
     </div>
