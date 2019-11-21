@@ -27,6 +27,12 @@ class DateComp extends Component {
             onChange={this.handleChange}></input>
           <button type="submit">Load APOD for this date</button>
         </form>
+        <select>
+          <option value="day">Day</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
       </div>
     );
   }
