@@ -6,6 +6,10 @@ will have user supply their own key, and then they will be able to navigate thro
 
 also want this version to be react-based.
 
+11/20/2019  
+site is live at https://boring-kepler-b775fe.netlify.com/
+now working on adding date manipulation.  using library called 'moment'. seems very good/exactly what i need.  need to add repository field to package.json file.
+
 11/14/2019
 have a goodish version of my MVP.  needs polishing, hosting, brainstorming on further ideas (LL says user login would be nice) - but not too shabby
 also, (No data before 1995-6-20)
