@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import ApodComp from '../../components/apod/Apod';
 import UserKey from '../../components/userkey/UserKey';
 import DateComp from '../../components/date/DateComp';
@@ -31,6 +32,16 @@ class GetApod extends Component {
     );
   }
 
+  setPreviousDay = () => {
+    let newDate = moment(this.state.date).add(-1, 'days');
+    return this.setState({ date: newDate.toISOString().slice(0, 10) });
+  };
+
+  setNextDay = () => {
+    let newDate = moment(this.state.date).add(1, 'days');
+    return this.setState({ date: newDate.toISOString().slice(0, 10) });
+  };
+
   componentDidMount() {
     this.fetchAstroData(this.state.key, this.state.date);
   }
@@ -43,7 +54,13 @@ class GetApod extends Component {
     return (
       <div>
         <UserKey updateKey={this.updateKey} />
-        <DateComp updateDate={this.updateDate} fetchAstroData={this.fetchAstroData} date={this.state.date} />
+
+        <DateComp updateDate={this.updateDate}
+          fetchAstroData={this.fetchAstroData}
+          date={this.state.date}
+          setPreviousDay={this.setPreviousDay}
+          setNextDay={this.setNextDay}/>
+
         <ApodComp astroPhoto={astroPhoto} />
       </div>
     );

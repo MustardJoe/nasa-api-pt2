@@ -8,11 +8,23 @@ class DateComp extends Component {
     updateDate: PropTypes.func.isRequired,
     fetchAstroData: PropTypes.func.isRequired,
     date: PropTypes.string.isRequired,
+    setPreviousDay: PropTypes.func.isRequired,
+    setNextDay: PropTypes.func.isRequired,
   };
 
   handleChange = ({ target }) => {
     this.props.updateDate(target.value);
   }
+
+  buttonClickPrevious = () => {
+    this.props.setPreviousDay();
+    this.props.fetchAstroData();
+  };
+
+  buttonClickNext = () => {
+    this.props.setNextDay();
+    this.props.fetchAstroData();
+  };
 
   handleSubmit = event => {
     event.preventDefault();
@@ -26,6 +38,8 @@ class DateComp extends Component {
           Enter Date: <input type="text" name="date" value={this.props.date} 
             onChange={this.handleChange}></input>
           <button type="submit">Load APOD for this date</button>
+          <button type="nextDay" onClick={this.buttonClickNext}>Next Day</button>
+          <button type="previousDay" onClick={this.buttonClickPrevious}>Previous Day</button>
         </form>
       </div>
     );
