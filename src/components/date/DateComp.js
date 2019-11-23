@@ -10,6 +10,7 @@ class DateComp extends Component {
     date: PropTypes.string.isRequired,
     setPreviousDay: PropTypes.func.isRequired,
     setNextDay: PropTypes.func.isRequired,
+    setRandomDay: PropTypes.func.isRequired,
   };
 
   handleChange = ({ target }) => {
@@ -26,6 +27,11 @@ class DateComp extends Component {
     this.props.fetchAstroData();
   };
 
+  buttonClickRandom = () => {
+    this.props.setRandomDay();
+    this.props.fetchAstroData();
+  }
+
   handleSubmit = event => {
     event.preventDefault();
     this.props.fetchAstroData();
@@ -35,10 +41,11 @@ class DateComp extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+          <button type="nextDay" onClick={this.buttonClickNext}>Next Day</button>
           Enter Date: <input type="text" name="date" value={this.props.date} 
             onChange={this.handleChange}></input>
-          <button type="submit">Load APOD for this date</button>
-          <button type="nextDay" onClick={this.buttonClickNext}>Next Day</button>
+          <button type="submit">Load APOD for specific date</button>
+          <button type="randomDay" onClick={this.buttonClickRandom}>Random Day</button>
           <button type="previousDay" onClick={this.buttonClickPrevious}>Previous Day</button>
         </form>
       </div>
