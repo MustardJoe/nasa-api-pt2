@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import randomMoment from 'moment-random';
+
 import ApodComp from '../../components/apod/Apod';
 import UserKey from '../../components/userkey/UserKey';
 import DateComp from '../../components/date/DateComp';
@@ -42,6 +44,11 @@ class GetApod extends Component {
     return this.setState({ date: newDate.toISOString().slice(0, 10) });
   };
 
+  setRandomDay = () => {
+    let randomDate = randomMoment(today, '1995-06-20').toISOString().slice(0, 10);
+    return this.setState({ date: randomDate });
+  }
+
   componentDidMount() {
     this.fetchAstroData(this.state.key, this.state.date);
   }
@@ -59,6 +66,7 @@ class GetApod extends Component {
           fetchAstroData={this.fetchAstroData}
           date={this.state.date}
           setPreviousDay={this.setPreviousDay}
+          setRandomDay={this.setRandomDay}
           setNextDay={this.setNextDay}/>
 
         <ApodComp astroPhoto={astroPhoto} />
