@@ -5,7 +5,7 @@ import styles from './Apod.css';
 function ApodComp({ astroPhoto }) {
   const {
     date = '1995 - dummy data',
-    explanation,
+    explanation = 'No data is loading, you may have encountered the rate limit',
     hdurl,
     title,
     url,
