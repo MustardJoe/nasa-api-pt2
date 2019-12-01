@@ -12,7 +12,15 @@ body {
   background: url(./assets/LeonardoJulio4-6-2017.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  a:visited {
+    color: MediumOrchid;
+  }
+  a:link {
+    color: DodgerBlue;
+  }
+
 }
+
 .app {
   margin: auto;
   align-self: center;
