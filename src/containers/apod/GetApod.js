@@ -56,7 +56,7 @@ class GetApod extends Component {
 
 
   render() {
-    const { astroPhoto } = this.state;
+    const { astroPhoto, loading } = this.state;
 
     return (
       <div>
@@ -69,7 +69,7 @@ class GetApod extends Component {
           setRandomDay={this.setRandomDay}
           setNextDay={this.setNextDay}/>
 
-        <ApodComp astroPhoto={astroPhoto} />
+        <ApodComp astroPhoto={astroPhoto} loading={loading} />
       </div>
     );
   }
