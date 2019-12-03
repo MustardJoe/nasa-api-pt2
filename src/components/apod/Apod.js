@@ -26,7 +26,6 @@ function ApodComp({ astroPhoto, loading }) {
           allowFullScreen
           title='video'
         />
-        <p>TKAE ME OUT LATER, testing if video switching logic works {url}</p>
         <p>Desciption: {explanation}</p>
         <p>Astronomy Picture of the Day from: {date}</p>
         <p>SD image: <a href={url}>{url}</a></p>
