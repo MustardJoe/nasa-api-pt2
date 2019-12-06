@@ -41,11 +41,11 @@ class DateComp extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <button type="nextDay" onClick={this.buttonClickNext}>Next Day</button>
           Enter Date: <input type="text" name="date" value={this.props.date} 
             onChange={this.handleChange}></input>
           <button type="submit">Load APOD for specific date</button>
           <button type="randomDay" onClick={this.buttonClickRandom}>Random Day</button>
+          <button type="nextDay" onClick={this.buttonClickNext}>Next Day</button>
           <button type="previousDay" onClick={this.buttonClickPrevious}>Previous Day</button>
         </form>
       </div>
