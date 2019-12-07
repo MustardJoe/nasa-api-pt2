@@ -1,11 +1,12 @@
 import React from 'react';
+import About from '../about/About';
 import PropTypes from 'prop-types';
 import styles from './Apod.css';
 
 const loadingImg = '../../src/assets/loadingimg.gif';
 
 function ApodComp({ astroPhoto, loading }) {
-  console.log('loading', loading);
+
   const {
     date = '1995 - dummy data',
     explanation = 'No data is loading, you may have encountered the rate limit',
@@ -14,7 +15,6 @@ function ApodComp({ astroPhoto, loading }) {
     url,
     media_type,
   } = astroPhoto;
-  console.log(media_type);
   
   if(media_type === 'video') {
     return (
