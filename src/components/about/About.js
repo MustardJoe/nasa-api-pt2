@@ -1,8 +1,11 @@
 import React from 'react';
+import IntroText from '../introtext/IntroText';
+import styles from './about.css';
 
 function About() {
   return (
-    <section>
+    <section className={styles.about}>
+      <IntroText />
       <h2>About AstroView</h2>
       <p>
         Upon first loading the site, AstroView loads with Astronomy Picture Of the Day (APOD)
