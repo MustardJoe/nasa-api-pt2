@@ -23,6 +23,12 @@ function About() {
         (Your key is never stored anywhere beyond your browser session cache.)  You
         can obtain a NASA api user key at <a href="https://api.nasa.gov/">api.nasa.gov/</a>.
       </p>
+      <p>
+        <span>
+          AstroView ©2019 by <a href="https://www.jonforney.com" target="blank">Jon Forney</a>.
+        </span>
+        All 
+      </p>
     </section>
   );
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import GetApod from '../containers/apod/GetApod';
-import IntroText from '../components/introtext/IntroText';
 import About from '../components/about/About';
 import styles from '../index.css';
 import {
