@@ -7,7 +7,6 @@ export default function IntroText() {
         Welcome to AtroView! I love astronomy and
         outer space, and so I created a user-friendly way to browse through the 
         decades of awesome daily astronomy pictures provided by the NASA api.
-        (Note: no data exists before 1995-6-20.)
       </p>
     </>
   );
