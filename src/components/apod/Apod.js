@@ -1,5 +1,4 @@
 import React from 'react';
-import About from '../about/About';
 import PropTypes from 'prop-types';
 import styles from './Apod.css';
 
@@ -37,7 +36,9 @@ function ApodComp({ astroPhoto, loading }) {
   return (
     <div className={styles.apodItem}>
       <h2>{title}</h2>
-      <img src={loading ? loadingImg : url} />
+      <a href={hdurl} target="_blank" rel="noopener noreferrer">
+        <img src={loading ? loadingImg : url} />
+      </a>
       <p>Desciption: {explanation}</p>
       <p>Astronomy Picture of the Day from: {date}</p>
       <p>SD image: <a href={url}>{url}</a></p>
