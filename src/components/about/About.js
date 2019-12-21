@@ -28,7 +28,8 @@ function About() {
       </p>
       <p>
         <span>
-          AstroView ©2019 by <a href="https://www.jonforney.com" target="blank">Jon Forney</a>.
+          AstroView ©2019 by <a href="https://www.jonforney.com" target="_blank"
+            rel="noopener noreferrer">Jon Forney</a>.
         </span> 
       </p>
     </section>
