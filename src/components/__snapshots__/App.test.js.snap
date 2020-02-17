@@ -1,7 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component renders App 1`] = `
-<h1>
-  Hello World
-</h1>
+<div
+  className="app"
+>
+  <BrowserRouter>
+    <div
+      className="topHead"
+    >
+      <h1>
+        AstroView
+      </h1>
+      <h2>
+        Helping You Experience the NASA Astronomy Picture Of the Day
+      </h2>
+      <nav>
+        <Link
+          className="link"
+          to="/"
+        >
+          Home
+        </Link>
+        <Link
+          className="link"
+          to="/about"
+        >
+          About
+        </Link>
+      </nav>
+    </div>
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        path="/about"
+      />
+    </Switch>
+  </BrowserRouter>
+</div>
 `;
