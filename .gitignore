@@ -4,3 +4,4 @@ dist
 key.js
 .vscode
 .npm-global
+buildnotes.md
