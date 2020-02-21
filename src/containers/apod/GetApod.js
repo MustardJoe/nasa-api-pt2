@@ -70,6 +70,12 @@ class GetApod extends Component {
           setNextDay={this.setNextDay}/>
 
         <ApodComp astroPhoto={astroPhoto} loading={loading} />
+        <DateComp updateDate={this.updateDate}
+          fetchAstroData={this.fetchAstroData}
+          date={this.state.date}
+          setPreviousDay={this.setPreviousDay}
+          setRandomDay={this.setRandomDay}
+          setNextDay={this.setNextDay}/>
       </div>
     );
   }
