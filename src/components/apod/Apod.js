@@ -7,7 +7,7 @@ const loadingImg = '../../src/assets/loadingimg.gif';
 function ApodComp({ astroPhoto, loading }) {
 
   const {
-    date = '1995 - dummy data',
+    date,
     explanation = 'No data is loading, you may have encountered the rate limit',
     hdurl,
     title,

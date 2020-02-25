@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import styles from './Datecomp.css';
-// import { todayDateSplit } from '../../services/todayDateSplit';
 
 class DateComp extends Component {
   static propTypes = {
