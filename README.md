@@ -9,11 +9,9 @@ AstroView as a way to display data from the Nasa Astronomy Picture of the day. P
 feel free to use AstroView to inspire you as you browse through the decades of photos
 and information!
 
-**Technical Info:** AstroView is a React SPA built as a front-end to interface with the
- NASA Astronomy Picture of the Day REST Api. AstroView makes use of the Moment.js library
- to help parse dates.
+**Technical Info:** AstroView is a React SPA built as a front-end to interface with the NASA Astronomy Picture of the Day REST Api. AstroView makes use of the Moment.js library to help parse dates.
 
-**Additionaly:** If you enjoy AstroView, please consider checking out more of my projects here on GitHub, or on http://www.jonforney.com/.  Additionally, I'm currently looking for work, so please feel free to visit my LinkedIn page at https://www.linkedin.com/in/jon-forney/ or contact me directly with your professional opportunies.
+**Further Info:**  If you enjoy AstroView, please consider checking out more of <a href="https://github.com/MustardJoe">my projects on GitHub</a>, or at my homepage, <a href="https://wwww.jonforney.com">https://www.jonforney.com/</a>.  My linkdIn page is available at <a href="https://www.linkedin.com/in/jon-forney/">https://www.linkedin.com/in/jon-forney/</a>.  Please feel free to contact me with your professional opportunities.
 
 <center>
 <img src="./src/assets/someStars.png">
